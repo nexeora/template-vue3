@@ -1,0 +1,35 @@
+{
+  "name": "@nekaii/new-template3-tslib",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/src/main.d.ts",
+      "default": "./dist/main.js"
+    }
+  },
+  "sideEffects": "./**/*.css",
+  "files": [
+    "dist",
+    "README.md",
+    "README_*.md"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "build": "tsx scripts/prebuild.ts && vite build && vitest run --config vitest.build.config.ts",
+    "check": "tsc -b --noEmit"
+  },
+  "devDependencies": {
+    "@types/jake": "^0.0.39",
+    "@types/node": "^26.1.0",
+    "jake": "^12.10.1",
+    "terser": "^5.48.0",
+    "tsx": "^4.22.4",
+    "typescript": "~6.0.2",
+    "unplugin-dts": "^1.0.2",
+    "vite": "^8.0.12",
+    "vite-plugin-prettier-format": "^1.0.0",
+    "vitest": "^4.1.10"
+  }
+}
